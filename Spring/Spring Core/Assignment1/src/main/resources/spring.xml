@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+ 
+
+    <!-- bean definitions here -->
+
+ <bean id="Address1" class="Address">
+    
+    <!-- for setter injection -->
+    
+    
+   <property name="Street">
+  
+   
+  <value>main lane</value> 
+     </property>
+     <property name="city">
+     <value>bundi</value>
+     </property>
+     <property name="zip">
+       
+    <value>323031</value>
+    </property>
+    
+    <property name="country">
+    <value>India</value>
+    </property>
+    </bean>
+     <bean id="obj" class="Customer">
+        
+   <property name="customerId">
+  
+   
+  <value>1</value> 
+     </property>
+     <property name="customerName">
+     <value>hari kripal</value>
+     </property>
+     <property name="customerContact">
+       
+    <value>9799281179</value>
+    </property>
+    
+    <property name="Address" ref="Address1"/>
+  
+        
+     
+     <!-- 
+     <constructor-arg type="java.lang.String" value="first"/>
+     
+    <constructor-arg type="java.lang.String" value="hari kripal"/>
+   <constructor-arg type="double" value="9799281179"/>
+    <constructor-arg type="java.lang.String" ref="Address1"/> 
+  -->
+ </bean>
+
+</beans>

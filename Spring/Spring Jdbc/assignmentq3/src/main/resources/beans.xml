@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<beans>
+    <bean id="Accounts" class="assignmentq3.BankAccountepositoryImpl">
+    <property name="accounts">
+    <list>
+    <ref bean ="l1"/>
+    </list>
+    </property>
+    </bean>
+    
+    
+    <bean id="l1" class="assignmentq3.BankAccount">
+    <property name="accountId" value="1"/>
+    <property name="accountHolderName" value="Hari kripal" />
+    <property name="accountType" value="salary"/>
+    <property name="accountBalance">
+    <value>50000</value>
+    </property>	
+    	
+    </bean>
+</beans>
+</beans>
